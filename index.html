@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineLecture</title>
     <style>
-        /* Allgemeine Styles */
         body {
             margin: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f7f4; /* Sanfter Hintergrund */
-            color: #333; /* Dunkelgrau für Text */
+            background-color: #f9f7f4;
+            color: #333;
             line-height: 1.6;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #6a1b1b; /* Weinrot für Überschriften */
+            color: #6a1b1b;
         }
 
-        /* Header */
         header {
             background-color: #fff;
             padding: 20px 40px;
@@ -28,18 +26,6 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #6a1b1b;
-        }
-
-        /* Navigation Bar */
-        nav {
-            display: flex;
-            justify-content: space-between;
         }
 
         nav a {
@@ -50,77 +36,49 @@
             position: relative;
         }
 
-        nav a:hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 2px;
-            background-color: #6a1b1b;
-        }
-
-        /* Hauptbereich */
         .main-section {
-            background-image: url('tasting.jpg');
+            background-image: url('weinberg.jpg');
             background-size: cover;
             background-position: center;
             color: white;
             padding: 80px 20px;
             text-align: center;
-            position: relative;
-        }
-
-        .main-section h2 {
-            font-size: 2.8em;
-        }
-
-        .main-section p {
-            font-size: 1.4em;
-            max-width: 700px;
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        /* Bildsektion im Aesop-Stil */
-        .image-container {
+            height: 67vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            margin: 60px 0;
+            align-items: center;
+        }
+
+        .image-grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
+            margin-top: -50px;
         }
 
-        .image-box {
-            flex: 1;
-            margin: 0 15px;
-            overflow: hidden;
-            position: relative;
-            border-radius: 8px;
-            max-width: 350px;
-            height: 400px; /* Feste Höhe für das Layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            max-width: 1200px;
+            margin-bottom: 10px;
         }
 
-        .image-box img {
+        .image-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .image-grid img, .image-row img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             border-radius: 8px;
         }
 
-        .image-box h3 {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 8px 12px;
-            font-size: 1.5em;
-            font-family: 'Great Vibes', cursive;
-        }
-
-        /* Footer */
         footer {
             background-color: #fff;
             text-align: center;
@@ -132,43 +90,41 @@
 </head>
 
 <body>
-
-    <!-- Header -->
     <header>
         <h1>WineLecture</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="About.html">Über uns</a>
-            <a href="courses.html">Kurse</a> <!-- Link zu WSET-Kursen -->
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
             <a href="blog.html">Blog</a>
-            <a href="contact.html">Kontakt</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- Hauptbereich -->
     <div class="main-section">
-        <h2>Willkommen bei WineLecture</h2>
-        <p>Ihr Ziel für Weinwissen, Verkostungen und exklusive Weinbergs-Erlebnisse.</p>
+        <h2>Welcome to WineLecture</h2>
+        <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
     </div>
 
-    <!-- Bildsektion im Aesop-Stil -->
-    <div class="image-container">
-        <div class="image-box">
-            <img src="Weinberg.jpg" alt="Weinberg">
+    <div class="image-grid-container">
+        <div class="image-grid">
+            <img src="Weinberg.jpg" alt="Wine Region">
+            <img src="Weintrauben.jpg" alt="Wine Selection">
+            <img src="grüneweinrebe.jpg" alt="Grapes">
+            <img src="Fresh.jpg" alt="Wine Tasting">
+            <img src="tasting.jpg" alt="Cellar">
         </div>
-        <div class="image-box">
-            <img src="Fresh.jpg" alt="Frischer Wein">
-        </div>
-        <div class="image-box">
-            <img src="Weintrauben.jpg" alt="Weintrauben">
+        <div class="image-row">
+            <img src="wine6.jpg" alt="Glass of Wine">
+            <img src="wine7.jpg" alt="Wine Bottle">
+            <img src="wine8.jpg" alt="Vineyard">
+            <img src="anstossen.jpg" alt="Wine Pairing">
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 WineLecture. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
-
 </body>
 
 </html>
