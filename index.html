@@ -4,54 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeinLectures</title>
+    <title>WineLecture</title>
     <style>
         /* General Styles */
         body {
             margin: 0;
-            font-family: 'Merriweather', serif;
-            background-color: #f8f5f0; /* Soft beige */
-            color: #3d2b1f; /* Warm brown */
-            line-height: 1.8;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f7f4; /* Soft background */
+            color: #333; /* Dark grey for text */
+            line-height: 1.6;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
+            color: #8b0000; /* Wine red color for headings */
         }
 
         /* Header */
         header {
-            background-color: #6a1b1b; /* Deep wine red */
-            color: white;
-            padding: 30px 0;
-            text-align: center;
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
-            letter-spacing: 2px;
+            color: #6a1b1b;
         }
 
         /* Navigation Bar */
         nav {
-            background-color: #e6dac8; /* Light gold-beige */
             display: flex;
-            justify-content: center;
-            padding: 15px 0;
+            justify-content: space-between;
         }
 
         nav a {
-            color: #3d2b1f; /* Warm brown */
             text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-family: 'Great Vibes', cursive;
-            transition: color 0.3s ease;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #6a1b1b; /* Deep wine red */
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #8b0000;
         }
 
         /* Main Section */
@@ -60,13 +66,13 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
             position: relative;
         }
 
         .main-section h2 {
-            font-size: 3em;
+            font-size: 2.8em;
         }
 
         .main-section p {
@@ -80,26 +86,29 @@
 
         /* About Section */
         .about-section {
-            text-align: center;
-            padding: 60px 20px;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .about-section h2 {
             font-size: 2.5em;
-            color: #6a1b1b;
+            color: #8b0000;
+            margin-bottom: 20px;
         }
 
         .about-section p {
-            max-width: 800px;
-            margin: 20px auto;
-            font-size: 1.2em;
-            color: #5a4033;
+            font-size: 1.1em;
+            margin-bottom: 20px;
         }
 
         /* Image Section */
         .image-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             flex-wrap: wrap;
             margin: 40px 0;
             padding: 20px;
@@ -134,11 +143,11 @@
 
         /* Footer */
         footer {
-            background-color: #6a1b1b;
-            color: white;
+            background-color: #fff;
             text-align: center;
-            padding: 20px 0;
-            font-size: 1.1em;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -147,21 +156,19 @@
 
     <!-- Header -->
     <header>
-        <h1>WeinLectures</h1>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="About.html" class="active">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#">Home</a>
-        <a href="About.html" class="active">About</a> <!-- Active link for About page -->
-        <a href="#">Courses</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-    </nav>
 
     <!-- Main Section -->
     <div class="main-section">
-        <h2>Welcome to WeinLectures</h2>
+        <h2>Welcome to WineLecture</h2>
         <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
     </div>
 
@@ -185,9 +192,17 @@
         </div>
     </div>
 
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About WineLecture</h2>
+        <p>At <strong>WineLecture</strong>, we blend the art of wine with modern living. Whether you're a casual enthusiast or an aspiring sommelier, our platform is your space to explore authentic stories, expert advice, and curated wine experiences.</p>
+        <p>We offer more than recommendations. Dive into thoughtful articles, discover wines that fit your style, and access specialized <strong>course materials</strong> designed to help you prepare for <strong>Sommelier certifications</strong>.</p>
+        <p>Minimal fuss, maximum taste—because wine is more than just a drink; it's a journey. Ready to explore?</p>
+    </div>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 WeinLectures. All rights reserved.</p>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
 
 </body>
