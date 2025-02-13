@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineLecture</title>
     <style>
-        /* General Styles */
+        /* Allgemeine Styles */
         body {
             margin: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f7f4; /* Soft background */
-            color: #333; /* Dark grey for text */
+            background-color: #f9f7f4; /* Sanfter Hintergrund */
+            color: #333; /* Dunkelgrau für Text */
             line-height: 1.6;
         }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            color: #8b0000; /* Wine red color for headings */
+            color: #6a1b1b; /* Weinrot für Überschriften */
         }
 
         /* Header */
@@ -57,10 +57,10 @@
             bottom: -5px;
             width: 100%;
             height: 2px;
-            background-color: #8b0000;
+            background-color: #6a1b1b;
         }
 
-        /* Main Section */
+        /* Hauptbereich */
         .main-section {
             background-image: url('tasting.jpg');
             background-size: cover;
@@ -84,48 +84,27 @@
             border-radius: 5px;
         }
 
-        /* About Section */
-        .about-section {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-section h2 {
-            font-size: 2.5em;
-            color: #8b0000;
-            margin-bottom: 20px;
-        }
-
-        .about-section p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
-        }
-
-        /* Image Section */
+        /* Bildsektion im Aesop-Stil */
         .image-container {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: 40px 0;
+            justify-content: center;
+            margin: 60px 0;
             padding: 20px;
         }
 
         .image-box {
             flex: 1;
-            margin: 15px;
+            margin: 0 15px;
             overflow: hidden;
             position: relative;
             border-radius: 8px;
             max-width: 350px;
+            height: 400px; /* Feste Höhe für das Layout */
         }
 
         .image-box img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -158,43 +137,36 @@
     <header>
         <h1>WineLecture</h1>
         <nav>
-    <a href="index.html">Home</a>
-    <a href="About.html">About</a>
-    <a href="courses.html">Courses</a> <!-- Neuer Link zu WSET Courses -->
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-</nav>
+            <a href="index.html">Home</a>
+            <a href="About.html">Über uns</a>
+            <a href="courses.html">Kurse</a> <!-- Link zu WSET-Kursen -->
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Kontakt</a>
+        </nav>
     </header>
 
-    <!-- Main Section -->
+    <!-- Hauptbereich -->
     <div class="main-section">
-        <h2>Welcome to WineLecture</h2>
-        <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
+        <h2>Willkommen bei WineLecture</h2>
+        <p>Ihr Ziel für Weinwissen, Verkostungen und exklusive Weinbergs-Erlebnisse.</p>
     </div>
 
-    <!-- Image Section -->
+    <!-- Bildsektion im Aesop-Stil -->
     <div class="image-container">
         <div class="image-box">
             <img src="Weinberg.jpg" alt="Weinberg">
-            <h3>Explore Wine Regions</h3>
         </div>
         <div class="image-box">
-            <img src="Fresh.jpg" alt="Fresh Wine">
-            <h3>Fresh Wine Selections</h3>
+            <img src="Fresh.jpg" alt="Frischer Wein">
         </div>
         <div class="image-box">
             <img src="Weintrauben.jpg" alt="Weintrauben">
-            <h3>Discover New Grapes</h3>
-        </div>
-        <div class="image-box">
-            <img src="tasting.jpg" alt="Wine Tasting">
-            <h3>Exclusive Tastings</h3>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+        <p>&copy; 2025 WineLecture. Alle Rechte vorbehalten.</p>
     </footer>
 
 </body>
