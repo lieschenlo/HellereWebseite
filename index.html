@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +19,41 @@
         }
 
         header {
-            background-color: #fff;
-            padding: 20px 40px;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .header-bg {
+            background-image: url('weinberg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            position: relative;
+        }
+
+        .header-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6); /* Milchige Schicht */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
             border-bottom: 1px solid #e0e0e0;
         }
 
@@ -33,50 +62,52 @@
             color: #333;
             margin: 0 15px;
             font-weight: bold;
-            position: relative;
-        }
-
-        .main-section {
-            background-image: url('weinberg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            height: 67vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         .image-grid-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin-top: -50px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
-            max-width: 1200px;
-            margin-bottom: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 15px;
         }
 
         .image-row {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
         }
 
-        .image-grid img, .image-row img {
+        .grid-item {
+            position: relative;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .grid-item img {
             width: 100%;
-            height: auto;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
+        }
+
+        .grid-title {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
         }
 
         footer {
@@ -88,37 +119,64 @@
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>WineLecture</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <div class="header-bg">
+            <div class="header-content">
+                <h1>WineLecture</h1>
+                <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
+            </div>
+        </div>
     </header>
 
-    <div class="main-section">
-        <h2>Welcome to WineLecture</h2>
-        <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
-    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
     <div class="image-grid-container">
         <div class="image-grid">
-            <img src="Weinberg.jpg" alt="Wine Region">
-            <img src="Weintrauben.jpg" alt="Wine Selection">
-            <img src="grüneweinrebe.jpg" alt="Grapes">
-            <img src="Fresh.jpg" alt="Wine Tasting">
-            <img src="tasting.jpg" alt="Cellar">
+            <a href="lecture.html" class="grid-item">
+                <img src="Weinberg.jpg" alt="Lecture">
+                <div class="grid-title">Lecture</div>
+            </a>
+            <a href="wineselection.html" class="grid-item">
+                <img src="Weintrauben.jpg" alt="Wine Selection">
+                <div class="grid-title">Wine Selection</div>
+            </a>
+            <a href="blog.html" class="grid-item">
+                <img src="grüneweinrebe.jpg" alt="Blog">
+                <div class="grid-title">Blog</div>
+            </a>
+            <a href="level1.html" class="grid-item">
+                <img src="Fresh.jpg" alt="Level 1">
+                <div class="grid-title">Level 1</div>
+            </a>
         </div>
         <div class="image-row">
-            <img src="wine6.jpg" alt="Glass of Wine">
-            <img src="wine7.jpg" alt="Wine Bottle">
-            <img src="wine8.jpg" alt="Vineyard">
-            <img src="anstossen.jpg" alt="Wine Pairing">
+            <a href="winepairing.html" class="grid-item">
+                <img src="tasting.jpg" alt="Wine Pairing">
+                <div class="grid-title">Wine Pairing</div>
+            </a>
+            <a href="cellar.html" class="grid-item">
+                <img src="wine6.jpg" alt="Cellar">
+                <div class="grid-title">Cellar</div>
+            </a>
+            <a href="vineyard.html" class="grid-item">
+                <img src="wine7.jpg" alt="Vineyard">
+                <div class="grid-title">Vineyard</div>
+            </a>
+            <a href="glass.html" class="grid-item">
+                <img src="wine8.jpg" alt="Glass of Wine">
+                <div class="grid-title">Glass of Wine</div>
+            </a>
+            <a href="toast.html" class="grid-item">
+                <img src="anstossen.jpg" alt="Cheers">
+                <div class="grid-title">Cheers</div>
+            </a>
         </div>
     </div>
 
@@ -126,5 +184,4 @@
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
 </body>
-
 </html>
