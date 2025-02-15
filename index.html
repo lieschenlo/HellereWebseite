@@ -1,4 +1,4 @@
-au<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@ au<!DOCTYPE html>
             background-image: url('Weinberg.jpg');
             background-size: cover;
             background-position: center;
-            height: 250px;
+            height: 350px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,19 +42,35 @@ au<!DOCTYPE html>
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.6); /* Milchige Schicht */
+            background: rgba(0, 0, 0, 0.5); /* Dunklere Milchige Schicht für bessere Lesbarkeit */
         }
 
         .header-content {
             position: relative;
             z-index: 2;
+            text-align: center;
+            color: white;
         }
 
         nav {
             background-color: #fff;
-            padding: 10px 0;
+            padding: 10px 20px;
             text-align: center;
             border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            color: #6a1b1b;
         }
 
         nav a {
@@ -64,9 +80,17 @@ au<!DOCTYPE html>
             font-weight: bold;
         }
 
+        .intro-text {
+            text-align: center;
+            margin: 60px 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #6a1b1b;
+        }
+
         .image-grid-container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 60px auto;
             padding: 0 20px;
         }
 
@@ -120,22 +144,27 @@ au<!DOCTYPE html>
     </style>
 </head>
 <body>
+    <nav>
+        <h1>WineLecture</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
     <header>
         <div class="header-bg">
             <div class="header-content">
-                <h1>WineLecture</h1>
+                <h2>Welcome to WineLecture</h2>
                 <p>Your destination for wine knowledge, tastings, and exclusive vineyard experiences.</p>
             </div>
         </div>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="intro-text">Explore the World of Wine, from Tasting Tips to Vineyard Secrets</div>
 
     <div class="image-grid-container">
         <div class="image-grid">
