@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - WineLecture</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF3E0;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: #5E2C2C;
+        }
+
+        nav {
+            background-color: #F5E8D0;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5E2C2C;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #A04040;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile div {
+            text-align: left;
+        }
+
+        .contact-form {
+            background: #F5E8D0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #5E2C2C;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .contact-form button:hover {
+            background-color: #A04040;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <div class="profile">
+            <img src="felix.jpg" alt="Felix - Master of Sommelier">
+            <div>
+                <h3>Felix - Master of Sommelier</h3>
+                <p>Felix, a Master of Sommelier, created this platform to help people prepare for the WSTF course and deepen their knowledge of wine. He shares his expertise and recommends the best wine destinations around the world.</p>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="lisa-marie.jpg" alt="Lisa-Marie - Creative Director">
+            <div>
+                <h3>Lisa-Marie - Creative Director</h3>
+                <p>Lisa-Marie brings Felix’s ideas to life, making them accessible to the world. She ensures that the content is engaging and beautifully presented for everyone to enjoy.</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
