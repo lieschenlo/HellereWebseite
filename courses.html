@@ -6,33 +6,83 @@
     <title>WineLecture Courses - WSET Learning</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #FAF3E0;
+            color: #333;
         }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: #5E2C2C;
+        }
+
+        nav {
+            background-color: #F5E8D0;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5E2C2C;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #A04040;
+        }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background: white;
+            max-width: 900px;
+            margin: 60px auto;
             padding: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            color: #8B0000;
-        }
+
         .course {
-            background: #eee;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 5px solid #8B0000;
+            background: #F5E8D0;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 6px solid #A04040;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .course:hover {
+            transform: translateY(-5px);
+        }
+
+        .course h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #F5E8D0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
     <div class="container">
         <h1>WineLecture - WSET Learning Materials</h1>
         <p>At WineLecture, we provide learning materials to help you prepare for WSET (Wine & Spirit Education Trust) courses. Whether you're a beginner or an advanced wine enthusiast, our resources will guide you through the structured learning approach of WSET.</p>
@@ -64,5 +114,9 @@
         <h2>How We Help</h2>
         <p>WineLecture provides study guides, practice exams, tasting tips, and expert insights to help you succeed in your WSET journey.</p>
     </div>
+
+    <footer>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+    </footer>
 </body>
 </html>
