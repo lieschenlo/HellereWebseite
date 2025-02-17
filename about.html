@@ -3,96 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | WeinLektures</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WineLecture Courses - WSET Learning</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f9f7f4;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #FAF3E0;
+            color: #333;
         }
 
-        header {
-            background-color: #fff;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: #5E2C2C;
+        }
+
+        nav {
+            background-color: #F5E8D0;
+            padding: 15px 0;
+            text-align: center;
             border-bottom: 1px solid #e0e0e0;
+            font-size: 18px;
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #5E2C2C;
             margin: 0 15px;
-            font-weight: bold;
-            position: relative;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
-        nav a:hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 2px;
-            background-color: #8b0000;
+        nav a:hover {
+            color: #A04040;
         }
 
-        .about-section {
-            max-width: 800px;
+        .container {
+            max-width: 900px;
             margin: 60px auto;
             padding: 20px;
-            background-color: #fff;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .about-section h2 {
-            font-size: 2.5em;
-            color: #8b0000;
-            margin-bottom: 20px;
+        .course {
+            background: #F5E8D0;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 6px solid #A04040;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
 
-        .about-section p {
-            font-size: 1.1em;
-            margin-bottom: 20px;
+        .course:hover {
+            transform: translateY(-5px);
+        }
+
+        .course h3 {
+            margin-top: 0;
         }
 
         footer {
-            background-color: #fff;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #e0e0e0;
+            background-color: #F5E8D0;
             margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>WeinLektures</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog</a>
-            <a href="wine-recommendations.html">Wine Recommendations</a>
-            <a href="About.html" class="active">About</a>
-        </nav>
-    </header>
+    <nav>
+        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <main>
-        <section class="about-section">
-            <h2>About WeinLektures</h2>
-            <p>At <strong>WeinLektures</strong>, we blend the art of wine with modern living. Whether you're a casual enthusiast or an aspiring sommelier, our platform is your space to explore authentic stories, expert advice, and curated wine experiences.</p>
-            <p>We offer more than recommendations. Dive into thoughtful articles, discover wines that fit your style, and access specialized <strong>course materials</strong> designed to help you prepare for <strong>Sommelier certifications</strong>.</p>
-            <p>Minimal fuss, maximum taste—because wine is more than just a drink; it's a journey. Ready to explore?</p>
-        </section>
-    </main>
+    <div class="container">
+        <h1>WineLecture - WSET Learning Materials</h1>
+        <p>At WineLecture, we provide learning materials to help you prepare for WSET (Wine & Spirit Education Trust) courses. Whether you're a beginner or an advanced wine enthusiast, our resources will guide you through the structured learning approach of WSET.</p>
+        
+        <h2>What is WSET?</h2>
+        <p>The Wine & Spirit Education Trust (WSET) offers globally recognized qualifications in wine and spirits. Their courses are structured to provide a progressive learning path for both industry professionals and enthusiasts.</p>
+        
+        <h2>WSET Course Levels</h2>
+        <div class="course">
+            <h3>WSET Level 1: Introduction to Wine</h3>
+            <p>Designed for beginners, this course covers basic wine types, tasting techniques, and food pairing principles.</p>
+        </div>
+        
+        <div class="course">
+            <h3>WSET Level 2: Intermediate</h3>
+            <p>Expands knowledge on wine regions, grape varieties, and tasting techniques, ideal for those with some prior knowledge.</p>
+        </div>
+        
+        <div class="course">
+            <h3>WSET Level 3: Advanced</h3>
+            <p>A deep dive into winemaking, viticulture, and blind tasting skills, preparing students for professional wine roles.</p>
+        </div>
+        
+        <div class="course">
+            <h3>WSET Level 4: Diploma</h3>
+            <p>The highest WSET qualification, offering an extensive study of wine production, global markets, and business strategies. A stepping stone to the Master of Wine program.</p>
+        </div>
+        
+        <h2>How We Help</h2>
+        <p>WineLecture provides study guides, practice exams, tasting tips, and expert insights to help you succeed in your WSET journey.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2024 WeinLektures. All rights reserved.</p>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
 </body>
 </html>
