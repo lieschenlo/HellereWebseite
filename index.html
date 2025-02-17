@@ -3,123 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineLecture</title>
+    <title>WineLecture | Discover & Learn</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            margin: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #FAF3E0;
+            background-color: #f9f7f4;
             color: #333;
-            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            color: #5E2C2C;
-        }
-
-        nav {
-            background-color: #F5E8D0;
-            padding: 15px 0;
-            text-align: center;
+        /* --- HEADER & NAVIGATION (angepasst an blog.html) --- */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #e0e0e0;
-            font-size: 18px;
         }
 
         nav a {
             text-decoration: none;
-            color: #5E2C2C;
+            color: #6a1b1b;
             margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #A04040;
-        }
-
-        .header-bg {
-            background-image: url('Weinberg.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 240px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-weight: bold;
             position: relative;
         }
 
-        .header-bg::after {
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #6a1b1b;
+        }
+
+        /* --- HERO SECTION MIT OVERLAY --- */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('wine-hero.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(250, 243, 224, 0.6);
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        .header-content {
+        .hero h1 {
+            font-size: 2.8em;
             position: relative;
             z-index: 2;
+            font-family: 'Lora', serif;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+            margin-top: 10px;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .content-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
             text-align: center;
-            color: #5E2C2C;
-            font-size: 28px;
-            font-weight: bold;
         }
 
-        .image-grid-container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
+        .content-section p {
+            font-size: 1.2em;
+            color: #444;
         }
 
-        .image-grid-container p {
-            font-size: 20px;
-            font-weight: 500;
-            color: #4A1A1A;
-            margin-bottom: 40px;
-        }
-
+        /* --- IMAGE GRID --- */
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            margin-top: 30px;
         }
 
-        .grid-item {
+        .image-item {
             position: relative;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .grid-item:hover {
-            transform: scale(1.05);
-        }
-
-        .grid-item img {
+        .image-item img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
-            border-radius: 10px;
+            filter: brightness(70%);
+            transition: 0.3s ease;
         }
 
-        .grid-title {
+        .image-item:hover img {
+            filter: brightness(50%);
+        }
+
+        .image-title {
             position: absolute;
-            bottom: 0;
+            bottom: 20px;
             left: 0;
             right: 0;
-            background: rgba(94, 44, 44, 0.8);
-            color: white;
-            padding: 12px;
-            font-size: 16px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            color: #6a1b1b;
+            font-size: 1.4em;
             font-weight: bold;
+            padding: 10px;
+            font-family: 'Lora', serif;
         }
 
+        /* --- FOOTER --- */
         footer {
-            background-color: #F5E8D0;
+            background-color: #fff;
             text-align: center;
             padding: 20px;
             border-top: 1px solid #e0e0e0;
@@ -128,47 +141,45 @@
     </style>
 </head>
 <body>
-    <nav>
-        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <header class="header-bg">
-        <div class="header-content">
-            Unlock the World of Wine – Taste, Learn, Enjoy.
-        </div>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="wine-recommendations.html">Wine Recommendations</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <div class="image-grid-container">
-        <p>Explore the World of Wine, from Tasting Tips to Vineyard Secrets.</p>
-        
+    <section class="hero">
+        <h1>Discover, Learn & Enjoy Wine</h1>
+        <p>Your guide to mastering wine knowledge and discovering the best wine experiences worldwide.</p>
+    </section>
+
+    <main class="content-section">
+        <p>Explore our curated selection of wine courses, recommendations, and travel guides.</p>
+
         <div class="image-grid">
-            <a href="lecture.html" class="grid-item">
-                <img src="Weinberg.jpg" alt="Learning material">
-                <div class="grid-title">Learning material</div>
+            <a href="courses.html" class="image-item">
+                <img src="wset-courses.jpg" alt="WSET Courses">
+                <div class="image-title">WSET Courses</div>
             </a>
-            <a href="wineselection.html" class="grid-item">
-                <img src="Fresh.jpg" alt="Wine Selection">
-                <div class="grid-title">Wine Selection</div>
+            <a href="winerecommendations.html" class="image-item">
+                <img src="wine-bottles.jpg" alt="Wine Recommendations">
+                <div class="image-title">Wine Recommendations</div>
             </a>
-            <a href="blog.html" class="grid-item">
-                <img src="italia.jpg" alt="Blog">
-                <div class="grid-title">Blog</div>
+            <a href="winetravel.html" class="image-item">
+                <img src="vineyard.jpg" alt="Wine Travel Destinations">
+                <div class="image-title">Wine Travel</div>
             </a>
-            <a href="level1.html" class="grid-item">
-                <img src="weinkeller.jpg" alt="Level 1">
-                <div class="grid-title">WSET</div>
-            </a>
-            <a href="winepairing.html" class="grid-item">
-                <img src="picnic.jpg" alt="Wine Pairing">
-                <div class="grid-title">Wine Pairing</div>
+            <a href="winebars.html" class="image-item">
+                <img src="wine-bar.jpg" alt="Best Wine Bars">
+                <div class="image-title">Best Wine Bars</div>
             </a>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
