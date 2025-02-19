@@ -3,56 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineLecture Courses - WSET Learning</title>
+    <title>WineLecture Courses</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Schriftstil */
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.7;
+            background-color: #f9f7f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #FAF3E0;
-            color: #333;
         }
 
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            color: #5E2C2C;
-        }
-
-        nav {
-            background-color: #F5E8D0;
-            padding: 15px 0;
-            text-align: center;
+        /* HEADER */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border-bottom: 1px solid #e0e0e0;
-            font-size: 18px;
         }
 
+        /* Navigation */
         nav a {
             text-decoration: none;
-            color: #5E2C2C;
+            color: #6a1b1b;
             margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: bold;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #A04040;
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #6a1b1b;
         }
 
+        /* HERO IMAGE (Obere Zeile) */
+        .course-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('view.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+
+        .course-header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .course-header h1 {
+            font-size: 2.5em;
+            position: relative;
+            z-index: 2;
+            font-family: 'Lora', serif;
+        }
+
+        /* CONTENT CONTAINER */
         .container {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 50px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* KURS BLÖCKE */
         .course {
-            background: #F5E8D0;
+            background: #f1e5d1;
             padding: 20px;
             margin: 15px 0;
-            border-left: 6px solid #A04040;
+            border-left: 6px solid #6a1b1b;
             border-radius: 8px;
             transition: transform 0.3s ease;
         }
@@ -65,32 +98,40 @@
             margin-top: 0;
         }
 
+        /* FOOTER */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #F5E8D0;
+            background-color: #fff;
             margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>WineLecture - WSET Learning Materials</h1>
+    <section class="course-header">
+        <h1>WineLecture - WSET Learning</h1>
+    </section>
+
+    <main class="container">
         <p>At WineLecture, we provide learning materials to help you prepare for WSET (Wine & Spirit Education Trust) courses. Whether you're a beginner or an advanced wine enthusiast, our resources will guide you through the structured learning approach of WSET.</p>
         
         <h2>What is WSET?</h2>
         <p>The Wine & Spirit Education Trust (WSET) offers globally recognized qualifications in wine and spirits. Their courses are structured to provide a progressive learning path for both industry professionals and enthusiasts.</p>
         
         <h2>WSET Course Levels</h2>
+        
         <div class="course">
             <h3>WSET Level 1: Introduction to Wine</h3>
             <p>Designed for beginners, this course covers basic wine types, tasting techniques, and food pairing principles.</p>
@@ -113,7 +154,7 @@
         
         <h2>How We Help</h2>
         <p>WineLecture provides study guides, practice exams, tasting tips, and expert insights to help you succeed in your WSET journey.</p>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
