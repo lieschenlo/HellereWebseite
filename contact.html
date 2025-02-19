@@ -4,48 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - WineLecture</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: #f9f7f4;
             color: #333;
-            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
 
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            color: #6a1b1b;
-        }
-
-        /* Header Styles for consistency */
+        /* --- HEADER & NAVIGATION --- */
         header {
             background-color: #fff;
             padding: 20px 40px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            font-family: 'Lora', serif;
-            font-size: 36px;
-            color: #6a1b1b;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         nav a {
             text-decoration: none;
             color: #6a1b1b;
             margin: 0 15px;
+            font-weight: bold;
             position: relative;
         }
 
@@ -59,6 +43,7 @@
             background-color: #6a1b1b;
         }
 
+        /* --- KONTAKT-BEREICH --- */
         .container {
             max-width: 900px;
             margin: 50px auto;
@@ -131,23 +116,23 @@
         }
 
         footer {
+            background-color: #fff;
             text-align: center;
             padding: 20px;
-            background: #fff;
-            margin-top: 40px;
             border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <a href="index.html" class="logo">WineLecture</a>
+        <h1>WineLecture</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
             <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
             <a href="contact.html" class="active">Contact</a>
         </nav>
     </header>
