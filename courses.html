@@ -6,16 +6,15 @@
     <title>WineLecture Courses</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Schriftstil */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f9f7f4;
             color: #333;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
-        /* HEADER */
         header {
             background-color: #fff;
             padding: 20px 40px;
@@ -25,7 +24,6 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
-        /* Navigation */
         nav a {
             text-decoration: none;
             color: #6a1b1b;
@@ -70,35 +68,60 @@
             font-family: 'Lora', serif;
         }
 
-        /* CONTENT CONTAINER */
+        /* --- CONTENT AREA --- */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        /* KURS BLÖCKE */
+        .container h2 {
+            margin-top: 40px;
+            font-size: 2em;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        /* --- GRID LAYOUT FÜR KURSE --- */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
         .course {
             background: #f1e5d1;
             padding: 20px;
-            margin: 15px 0;
-            border-left: 6px solid #6a1b1b;
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            border-left: 6px solid #6a1b1b;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
         }
 
         .course:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         .course h3 {
             margin-top: 0;
+            font-size: 1.5em;
+            font-weight: bold;
         }
 
-        /* FOOTER */
+        .course p {
+            font-size: 1em;
+            color: #555;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -113,7 +136,6 @@
         <h1>WineLecture</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="courses.html" class="active">Courses</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
@@ -126,32 +148,31 @@
 
     <main class="container">
         <p>At WineLecture, we provide learning materials to help you prepare for WSET (Wine & Spirit Education Trust) courses. Whether you're a beginner or an advanced wine enthusiast, our resources will guide you through the structured learning approach of WSET.</p>
-        
+
         <h2>What is WSET?</h2>
         <p>The Wine & Spirit Education Trust (WSET) offers globally recognized qualifications in wine and spirits. Their courses are structured to provide a progressive learning path for both industry professionals and enthusiasts.</p>
-        
+
         <h2>WSET Course Levels</h2>
-        
-        <div class="course">
-            <h3>WSET Level 1: Introduction to Wine</h3>
-            <p>Designed for beginners, this course covers basic wine types, tasting techniques, and food pairing principles.</p>
+
+        <div class="course-grid">
+            <div class="course">
+                <h3>WSET Level 1: Introduction to Wine</h3>
+                <p>Designed for beginners, this course covers basic wine types, tasting techniques, and food pairing principles.</p>
+            </div>
+            <div class="course">
+                <h3>WSET Level 2: Intermediate</h3>
+                <p>Expands knowledge on wine regions, grape varieties, and tasting techniques, ideal for those with some prior knowledge.</p>
+            </div>
+            <div class="course">
+                <h3>WSET Level 3: Advanced</h3>
+                <p>A deep dive into winemaking, viticulture, and blind tasting skills, preparing students for professional wine roles.</p>
+            </div>
+            <div class="course">
+                <h3>WSET Level 4: Diploma</h3>
+                <p>The highest WSET qualification, offering an extensive study of wine production, global markets, and business strategies. A stepping stone to the Master of Wine program.</p>
+            </div>
         </div>
-        
-        <div class="course">
-            <h3>WSET Level 2: Intermediate</h3>
-            <p>Expands knowledge on wine regions, grape varieties, and tasting techniques, ideal for those with some prior knowledge.</p>
-        </div>
-        
-        <div class="course">
-            <h3>WSET Level 3: Advanced</h3>
-            <p>A deep dive into winemaking, viticulture, and blind tasting skills, preparing students for professional wine roles.</p>
-        </div>
-        
-        <div class="course">
-            <h3>WSET Level 4: Diploma</h3>
-            <p>The highest WSET qualification, offering an extensive study of wine production, global markets, and business strategies. A stepping stone to the Master of Wine program.</p>
-        </div>
-        
+
         <h2>How We Help</h2>
         <p>WineLecture provides study guides, practice exams, tasting tips, and expert insights to help you succeed in your WSET journey.</p>
     </main>
