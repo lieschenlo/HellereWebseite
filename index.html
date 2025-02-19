@@ -4,144 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineLecture</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
 
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #f9f7f4;
-            color: #333;
-            line-height: 1.7;
-        }
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: #f9f7f4;
+        color: #333;
+        line-height: 1.7;
+    }
 
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            color: #6a1b1b;
-        }
+    h1, h2, h3 {
+        font-family: 'Lora', serif;
+        color: #6a1b1b;
+    }
 
-        nav {
-            background-color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-            font-size: 18px;
-        }
+    /* Navigation */
+    nav {
+        background-color: #fff;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 18px;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: #6a1b1b;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+    nav a {
+        text-decoration: none;
+        color: #6a1b1b;
+        margin: 0 15px;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
 
-        nav a:hover {
-            color: #A04040;
-        }
+    nav a:hover {
+        color: #A04040;
+    }
 
-        .nav-title {
-            font-family: 'Lora', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: #6a1b1b;
-            margin-right: 20px;
-            display: inline-block;
-        }
+    /* Header */
+    .header-bg {
+        background-image: url('Weinberg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
 
-        .header-bg {
-            background-image: url('Weinberg.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 240px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+    .header-bg::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(249, 247, 244, 0.6);
+    }
 
-        .header-bg::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(249, 247, 244, 0.6);
-        }
+    .header-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #6a1b1b;
+        font-size: 28px;
+        font-weight: bold;
+    }
 
-        .header-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #6a1b1b;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    /* Grid-Container */
+    .image-grid-container {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 20px;
+        text-align: center;
+    }
 
-        .image-grid-container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+    .image-grid-container p {
+        font-size: 20px;
+        font-weight: 500;
+        color: #4A1A1A;
+        margin-bottom: 40px;
+    }
 
-        .image-grid-container p {
-            font-size: 20px;
-            font-weight: 500;
-            color: #4A1A1A;
-            margin-bottom: 40px;
-        }
+    /* Neues Grid-Layout */
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 
+    .image-grid a:nth-child(n+4) {
+        grid-column: span 2;
+    }
+
+    /* Responsive Anpassungen */
+    @media (max-width: 900px) {
         .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
         }
+        .image-grid a:nth-child(n+4) {
+            grid-column: span 1;
+        }
+    }
 
-        .grid-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
+    @media (max-width: 600px) {
+        .image-grid {
+            grid-template-columns: 1fr;
         }
+        .image-grid a {
+            grid-column: span 1;
+        }
+    }
 
-        .grid-item:hover {
-            transform: scale(1.05);
-        }
+    /* Grid-Elemente */
+    .grid-item {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
 
-        .grid-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+    .grid-item:hover {
+        transform: scale(1.05);
+    }
 
-        .grid-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(106, 27, 27, 0.8);
-            color: white;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-        }
+    .grid-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 
-        footer {
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 40px;
-        }
-    </style>
+    .grid-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(106, 27, 27, 0.8);
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #fff;
+        text-align: center;
+        padding: 20px;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 40px;
+    }
+</style>
 </head>
 <body>
     <nav>
         <span class="nav-title">WineLecture</span>
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="courses.html">Courses</a>
         <a href="blog.html">Blog</a>
