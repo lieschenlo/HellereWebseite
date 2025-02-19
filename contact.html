@@ -18,19 +18,34 @@
             color: #6a1b1b;
         }
 
-        nav {
+        /* Header Styles for consistency */
+        header {
             background-color: #fff;
             padding: 20px 40px;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            color: #6a1b1b;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
             font-size: 18px;
+            font-weight: bold;
         }
 
         nav a {
             text-decoration: none;
             color: #6a1b1b;
             margin: 0 15px;
-            font-weight: bold;
             position: relative;
         }
 
@@ -125,23 +140,26 @@
     </style>
 </head>
 <body>
-    <nav>
-        <h1 style="display: inline; margin-right: 20px;">WineLecture</h1>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html" class="active">Contact</a>
-    </nav>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">WineLecture</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
     <div class="container">
         <h2>Contact Us</h2>
 
         <div class="profile">
-            <img src="felix.jpg" alt="Felix - Master of Sommelier">
+            <img src="felix.jpg" alt="Felix - Wine Sommelier">
             <div>
-                <h3>Felix - Master of Sommelier</h3>
-                <p>Felix, a Master of Sommelier, created this platform to help people prepare for the WSTF course and deepen their knowledge of wine. He shares his expertise and recommends the best wine destinations around the world.</p>
+                <h3>Felix - Wine Sommelier</h3>
+                <p>Felix, a Master Sommelier with the WSET Level 4 Diploma, came up with the idea for this platform to provide essential learning materials that he felt were missing during his own journey to achieving Level 4. His goal is to help others prepare for the WSET courses and deepen their wine knowledge. Felix also shares his expertise and recommends the best wine destinations around the world.</p>
             </div>
         </div>
 
@@ -149,7 +167,7 @@
             <img src="lisa-marie.jpg" alt="Lisa-Marie - Content & Design Lead">
             <div>
                 <h3>Lisa-Marie - Content & Design Lead</h3>
-                <p>Lisa-Marie brings Felix’s ideas to life, making them accessible to the world. She ensures that the content is engaging and beautifully presented for everyone to enjoy.</p>
+                <p>Lisa-Marie brought Felix’s idea to life, transforming it into a sophisticated and user-friendly platform. She focused on creating content that is not only engaging and informative but also sleek and visually appealing, making it easy for wine lovers to access and enjoy. Her work ensures that every user, whether a beginner or seasoned enthusiast, has an enriching and seamless experience.</p>
             </div>
         </div>
 
