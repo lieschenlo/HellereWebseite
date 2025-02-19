@@ -3,203 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineLecture</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+    <title>WineLecture Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #f9f7f4;
-        color: #333;
-        line-height: 1.7;
-    }
+        /* HEADER */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-    h1, h2, h3 {
-        font-family: 'Lora', serif;
-        color: #6a1b1b;
-    }
+        nav a {
+            text-decoration: none;
+            color: #6a1b1b;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
 
-    /* Navigation */
-    nav {
-        background-color: #fff;
-        padding: 15px 0;
-        text-align: center;
-        border-bottom: 1px solid #e0e0e0;
-        font-size: 18px;
-    }
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #6a1b1b;
+        }
 
-    nav a {
-        text-decoration: none;
-        color: #6a1b1b;
-        margin: 0 15px;
-        font-weight: 600;
-        transition: color 0.3s;
-    }
+        /* HEADER IMAGE */
+        .home-header {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('view.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
 
-    nav a:hover {
-        color: #A04040;
-    }
+        .home-header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Milchiger Schatten */
+        }
 
-    /* Header */
-    .header-bg {
-        background-image: url('Weinberg.jpg');
-        background-size: cover;
-        background-position: center;
-        height: 240px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
+        .home-header h1 {
+            font-size: 2.8em;
+            position: relative;
+            z-index: 2;
+            font-family: 'Lora', serif;
+        }
 
-    .header-bg::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(249, 247, 244, 0.6);
-    }
+        /* INTRO */
+        .home-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .header-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        color: #6a1b1b;
-        font-size: 28px;
-        font-weight: bold;
-    }
+        .home-section p {
+            font-size: 1.3em;
+            color: #444;
+        }
 
-    /* Grid-Container */
-    .image-grid-container {
-        max-width: 1200px;
-        margin: 60px auto;
-        padding: 0 20px;
-        text-align: center;
-    }
+        /* GRID LAYOUT */
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
 
-    .image-grid-container p {
-        font-size: 20px;
-        font-weight: 500;
-        color: #4A1A1A;
-        margin-bottom: 40px;
-    }
-
-    /* Neues Grid-Layout */
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .image-grid a:nth-child(n+4) {
-        grid-column: span 2;
-    }
-
-    /* Responsive Anpassungen */
-    @media (max-width: 900px) {
-        .image-grid {
+        .home-grid-bottom {
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
         }
-        .image-grid a:nth-child(n+4) {
-            grid-column: span 1;
+
+        .grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-    }
 
-    @media (max-width: 600px) {
-        .image-grid {
-            grid-template-columns: 1fr;
+        .grid-item:hover {
+            transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
         }
-        .image-grid a {
-            grid-column: span 1;
+
+        .grid-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: brightness(75%);
+            transition: 0.3s ease;
         }
-    }
 
-    /* Grid-Elemente */
-    .grid-item {
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease-in-out;
-    }
+        .grid-title {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            color: #6a1b1b;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 10px;
+            font-family: 'Lora', serif;
+        }
 
-    .grid-item:hover {
-        transform: scale(1.05);
-    }
-
-    .grid-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .grid-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(106, 27, 27, 0.8);
-        color: white;
-        padding: 12px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #fff;
-        text-align: center;
-        padding: 20px;
-        border-top: 1px solid #e0e0e0;
-        margin-top: 40px;
-    }
-</style>
+        /* FOOTER */
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <span class="nav-title">WineLecture</span>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="courses.html">Courses</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-
-    <header class="header-bg">
-        <div class="header-content">
-            Discover, Taste & Learn – Your Wine Journey Starts Here.
-        </div>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </header>
 
-    <div class="image-grid-container">
+    <section class="home-header">
+        <h1>Discover, Taste & Learn – Your Wine Journey Starts Here</h1>
+    </section>
+
+    <main class="home-section">
         <p>Explore the World of Wine, from Tasting Tips to Vineyard Secrets.</p>
-        
-        <div class="image-grid">
-            <a href="lecture.html" class="grid-item">
-                <img src="Weinberg.jpg" alt="Learning material">
-                <div class="grid-title">Learning material</div>
+
+        <!-- 3 Bilder oben -->
+        <div class="home-grid">
+            <a href="anstossen.html" class="grid-item">
+                <img src="winetrauben.jpg" alt="Best Wine Bars">
+                <div class="grid-title">The Best Wine Bars to Visit</div>
             </a>
-            <a href="wineselection.html" class="grid-item">
-                <img src="Fresh.jpg" alt="Wine Selection">
-                <div class="grid-title">Wine Selection</div>
+            <a href="winetravel.html" class="grid-item">
+                <img src="grüneweinrebe.jpg" alt="Wine Travel Destinations">
+                <div class="grid-title">Top Wine Travel Destinations</div>
             </a>
-            <a href="blog.html" class="grid-item">
-                <img src="italia.jpg" alt="Blog">
-                <div class="grid-title">Blog</div>
-            </a>
-            <a href="level1.html" class="grid-item">
-                <img src="weinkeller.jpg" alt="Level 1">
-                <div class="grid-title">WSET</div>
-            </a>
-            <a href="winepairing.html" class="grid-item">
-                <img src="picnic.jpg" alt="Wine Pairing">
-                <div class="grid-title">Wine Pairing</div>
+            <a href="winerecommendations.html" class="grid-item">
+                <img src="weinglaeser.jpg" alt="Wine Recommendations">
+                <div class="grid-title">Curated Wine Recommendations</div>
             </a>
         </div>
-    </div>
+
+        <!-- 2 Bilder unten -->
+        <div class="home-grid-bottom">
+            <a href="restaurantpairing.html" class="grid-item">
+                <img src="italia.jpg" alt="Restaurant Wine Pairings">
+                <div class="grid-title">Perfect Wine Pairings for Dining Out</div>
+            </a>
+            <a href="wineeducation.html" class="grid-item">
+                <img src="winebook.jpg" alt="Wine Education">
+                <div class="grid-title">Deepen Your Wine Knowledge</div>
+            </a>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
