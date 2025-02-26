@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WineLecture Level 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6a1b1b;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .course-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('weinkeller.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+
+        .levels-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .level {
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s ease, height 0.3s ease;
+            overflow: hidden;
+            height: 100px;
+        }
+
+        .level:hover {
+            transform: scale(1.05);
+            height: 200px;
+        }
+
+        .level span {
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+
+        .level p {
+            position: relative;
+            z-index: 2;
+            margin-top: 10px;
+            background: white;
+            color: #333;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            display: none;
+        }
+
+        .level:hover p {
+            display: block;
+        }
+
+        .level-4 { background-color: #982145; }
+
+        .icons-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .icon-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
+        }
+
+        .icon-box img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="course-header">
+        <h1>WSET Level 4 - Diploma</h1>
+    </section>
+
+    <div class="levels-container">
+        <div class="level level-4">
+            <span>WSET Level 4</span>
+            <span>Diploma</span>
+            <p>Extensive study of wine production, markets, and business strategies.</p>
+        </div>
+    </div>
+
+    <div class="icons-container">
+        <div class="icon-box">
+            <img src="wine-production.jpg" alt="Wine Production">
+            <h3>Wine Production</h3>
+        </div>
+        <div class="icon-box">
+            <img src="wine-business.jpg" alt="Wine Business">
+            <h3>Wine Business</h3>
+        </div>
+        <div class="icon-box">
+            <img src="wines-of-the-world.jpg" alt="Wines of the World">
+            <h3>Wines of the World</h3>
+        </div>
+        <div class="icon-box">
+            <img src="sparkling-wines.jpg" alt="Sparkling Wines">
+            <h3>Sparkling Wines</h3>
+        </div>
+        <div class="icon-box">
+            <img src="fortified-wines.jpg" alt="Fortified Wines">
+            <h3>Fortified Wines</h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
