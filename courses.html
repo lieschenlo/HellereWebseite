@@ -40,16 +40,6 @@
             position: relative;
         }
 
-        .course-header::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
         .levels-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -73,18 +63,7 @@
 
         .level:hover {
             transform: scale(1.05);
-            height: 250px;
-        }
-
-        .level::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
+            height: 200px;
         }
 
         .level span {
@@ -96,11 +75,12 @@
         .level p {
             position: relative;
             z-index: 2;
-            margin-top: 20px;
+            margin-top: 10px;
             background: white;
             color: #333;
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
+            font-size: 0.9em;
             display: none;
         }
 
@@ -112,6 +92,26 @@
         .level-2 { background-color: #2373c4; }
         .level-3 { background-color: #2e8753; }
         .level-4 { background-color: #982145; }
+
+        .help-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .help-container h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .help-container p {
+            font-size: 1.1em;
+            color: #444;
+        }
     </style>
 </head>
 <body>
@@ -133,31 +133,31 @@
         <div class="level level-1">
             <span>WSET Level 1</span>
             <span>Introduction to Wine</span>
-            <p>Designed for beginners, this course covers basic wine types, tasting techniques, and food pairing principles.</p>
+            <p>Basics of wine types, tasting techniques, and food pairing principles.</p>
         </div>
         <div class="level level-2">
             <span>WSET Level 2</span>
             <span>Intermediate</span>
-            <p>Expands knowledge on wine regions, grape varieties, and tasting techniques, ideal for those with some prior knowledge.</p>
+            <p>Expands knowledge on wine regions, grape varieties, and tasting techniques.</p>
         </div>
         <div class="level level-3">
             <span>WSET Level 3</span>
             <span>Advanced</span>
-            <p>A deep dive into winemaking, viticulture, and blind tasting skills, preparing students for professional wine roles.</p>
+            <p>Deep dive into winemaking, viticulture, and blind tasting skills.</p>
         </div>
         <div class="level level-4">
             <span>WSET Level 4</span>
             <span>Diploma</span>
-            <p>The highest WSET qualification, offering an extensive study of wine production, global markets, and business strategies. A stepping stone to the Master of Wine program.</p>
+            <p>Extensive study of wine production, markets, and business strategies.</p>
         </div>
     </div>
 
-    <main class="container">
+    <div class="help-container">
         <h2>How We Can Help</h2>
         <p>Unlock your wine expertise with our exclusive learning materials. At WineLecture, we provide in-depth study guides, interactive exercises, and expert insights tailored for every level of your WSET journey. 
         Whether you're taking your first sip into the world of wine or preparing for the prestigious Diploma, our structured content will guide you every step of the way. 
         Join our growing community of wine enthusiasts and professionals – and gain access to premium resources designed to elevate your knowledge. Ready to take the next step? Sign up today and start learning!</p>
-    </main>
+    </div>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
