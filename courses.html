@@ -101,6 +101,7 @@
             text-align: center;
             margin: 20px;
             font-weight: bold;
+            position: relative; /* Hinzugefügt */
         }
 
         .how-it-works-tooltip {
@@ -115,6 +116,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 300px;
+            z-index: 10; /* Optional, falls notwendig */
         }
 
         .how-it-works:hover + .how-it-works-tooltip {
