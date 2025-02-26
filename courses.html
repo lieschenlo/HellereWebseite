@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WineLecture Courses</title>
+    <title>WineLecture Level 4</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -34,8 +34,8 @@
 
         .course-header {
             text-align: center;
-            padding: 80px 20px;
-            background: url('tasting.jpg') no-repeat center center/cover;
+            padding: 60px 20px;
+            background-color: #982145;
             color: white;
             position: relative;
         }
@@ -43,9 +43,9 @@
         .levels-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 30px;
             max-width: 1000px;
-            margin: 60px auto;
+            margin: 60px auto 80px auto;
             text-align: center;
         }
 
@@ -53,17 +53,16 @@
             padding: 20px;
             border-radius: 10px;
             position: relative;
-            color: #333;
+            color: white;
             font-size: 1.2em;
             font-weight: bold;
-            transition: transform 0.3s ease, height 0.3s ease;
             overflow: hidden;
-            height: 100px;
+            height: 250px; /* Set height to allow space for the description */
+            transition: transform 0.3s ease, height 0.3s ease;
         }
 
         .level:hover {
             transform: scale(1.05);
-            height: 200px;
         }
 
         .level span {
@@ -73,19 +72,17 @@
         }
 
         .level p {
-            position: relative;
-            z-index: 2;
-            margin-top: 10px;
-            background: white;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.7); /* Milchiger Hintergrund */
             color: #333;
-            padding: 8px;
             border-radius: 5px;
             font-size: 0.9em;
-            display: none;
-        }
-
-        .level:hover p {
             display: block;
+            z-index: 2;
         }
 
         .level-1 { background-color: #c04445; }
@@ -93,43 +90,14 @@
         .level-3 { background-color: #2e8753; }
         .level-4 { background-color: #982145; }
 
-        /* Tooltip für How it works */
-        .how-it-works {
-            color: #333;
-            font-size: 1.2em;
-            cursor: pointer;
-            text-align: center;
-            margin: 20px;
-            font-weight: bold;
-            position: relative; /* Hinzugefügt */
-        }
-
-        .how-it-works-tooltip {
-            display: none;
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            position: absolute;
-            top: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            z-index: 10; /* Optional, falls notwendig */
-        }
-
-        .how-it-works:hover + .how-it-works-tooltip {
-            display: block;
-        }
-
         footer {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             border-top: 1px solid #e0e0e0;
-            margin-top: 60px; /* Mehr Abstand zwischen Footer und Inhalt */
+            margin-top: 60px;
         }
+
     </style>
 </head>
 <body>
@@ -138,13 +106,13 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="courses.html" class="active">Courses</a>
-            <a href="blog.html">Tasting Room</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
     
     <section class="course-header">
-        <h1></h1>
+        <h1>WSET Level 4 - Diploma</h1>
     </section>
 
     <div class="levels-container">
@@ -164,18 +132,9 @@
             <p>Deep dive into winemaking, viticulture, and blind tasting skills.</p>
         </div>
         <div class="level level-4">
-            <a href="level4.html">
-                <span>WSET Level 4</span>
-                <span>Diploma</span>
-                <p>Extensive study of wine production, markets, and business strategies.</p>
-            </a>
-        </div>
-    </div>
-
-    <div class="how-it-works">
-        How it works
-        <div class="how-it-works-tooltip">
-            <p>Our courses are designed to help you progress through the levels at your own pace. After registering, you'll access learning materials and mock exams. To access practice questions and prepare for the final exam, a paywall is enabled, giving you premium access once the payment is processed.</p>
+            <span>WSET Level 4</span>
+            <span>Diploma</span>
+            <p>Extensive study of wine production, markets, and business strategies.</p>
         </div>
     </div>
 
