@@ -93,24 +93,39 @@
         .level-3 { background-color: #2e8753; }
         .level-4 { background-color: #982145; }
 
-        .help-container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Tooltip für How it works */
+        .how-it-works {
+            color: #2373c4;
+            font-size: 1.2em;
+            cursor: pointer;
             text-align: center;
+            margin: 20px;
+            font-weight: bold;
         }
 
-        .help-container h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
+        .how-it-works-tooltip {
+            display: none;
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
         }
 
-        .help-container p {
-            font-size: 1.1em;
-            color: #444;
+        .how-it-works:hover + .how-it-works-tooltip {
+            display: block;
+        }
+
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
         }
     </style>
 </head>
@@ -148,17 +163,17 @@
         <div class="level level-4">
             <a href="level4.html">
                 <span>WSET Level 4</span>
-                <span><a href="level4.html">Diploma</a></span>  <!-- Nur "Diploma" als Link -->
+                <span>Diploma</span>
                 <p>Extensive study of wine production, markets, and business strategies.</p>
             </a>
         </div>
     </div>
 
-    <div class="help-container">
-        <h2>How We Can Help</h2>
-        <p>Unlock your wine expertise with our exclusive learning materials. At WineLecture, we provide in-depth study guides, interactive exercises, and expert insights tailored for every level of your WSET journey. 
-        Whether you're taking your first sip into the world of wine or preparing for the prestigious Diploma, our structured content will guide you every step of the way. 
-        Join our growing community of wine enthusiasts and professionals – and gain access to premium resources designed to elevate your knowledge. Ready to take the next step? Sign up today and start learning!</p>
+    <div class="how-it-works">
+        How it works
+        <div class="how-it-works-tooltip">
+            <p>Our courses are designed to help you progress through the levels at your own pace. After registering, you'll access learning materials and mock exams. To access practice questions and prepare for the final exam, a paywall is enabled, giving you premium access once the payment is processed.</p>
+        </div>
     </div>
 
     <footer>
