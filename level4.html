@@ -91,31 +91,27 @@
         .level-4 { background-color: #982145; }
 
         .icons-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;  /* Flexbox für horizontale Anordnung */
+            justify-content: center;
             gap: 20px;
             max-width: 1000px;
             margin: 40px auto;
-            text-align: center;
         }
 
         .icon-box {
             background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 50%;  /* Runde Form */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-        }
-
-        .icon-box:hover {
-            transform: scale(1.05);
+            text-align: center;
         }
 
         .icon-box img {
-            width: 100px;
-            height: 100px;
+            width: 80px;  /* Größe der Icons anpassen */
+            height: 80px;  /* Gleiche Höhe für runde Form */
             object-fit: cover;
-            margin-bottom: 15px;
+            border-radius: 50%;  /* Runde Icons */
         }
 
         footer {
@@ -123,6 +119,10 @@
             padding: 20px;
             text-align: center;
             border-top: 1px solid #e0e0e0;
+        }
+
+        .icon-box:hover {
+        transform: scale(1.05);
         }
     </style>
 </head>
@@ -141,33 +141,27 @@
         <h1>WSET Level 4 - Diploma</h1>
     </section>
 
-    <div class="levels-container">
-        <div class="level level-4">
-            <span>WSET Level 4</span>
-            <span>Diploma</span>
-            <p>Extensive study of wine production, markets, and business strategies.</p>
-        </div>
     </div>
 
     <div class="icons-container">
         <div class="icon-box">
-            <img src="wine-production.jpg" alt="Wine Production">
+            <img src="wineproduction.jpg" alt="Wine Production">
             <h3>Wine Production</h3>
         </div>
         <div class="icon-box">
-            <img src="wine-business.jpg" alt="Wine Business">
+            <img src="winebusiness.jpg" alt="Wine Business">
             <h3>Wine Business</h3>
         </div>
         <div class="icon-box">
-            <img src="wines-of-the-world.jpg" alt="Wines of the World">
+            <img src="worldofwines.jpg" alt="Wines of the World">
             <h3>Wines of the World</h3>
         </div>
         <div class="icon-box">
-            <img src="sparkling-wines.jpg" alt="Sparkling Wines">
+            <img src="sparklingwines.jpg" alt="Sparkling Wines">
             <h3>Sparkling Wines</h3>
         </div>
         <div class="icon-box">
-            <img src="fortified-wines.jpg" alt="Fortified Wines">
+            <img src="fortifiedwines.jpg" alt="Fortified Wines">
             <h3>Fortified Wines</h3>
         </div>
     </div>
