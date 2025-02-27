@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WineLecture - Flashcards</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6a1b1b;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #6a1b1b;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* FLASHCARDS */
+        .flashcards {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .card {
+            padding: 15px;
+            background: #fff5f5;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 5px solid #6a1b1b;
+        }
+
+        .card:hover {
+            background-color: #fef1f1;
+        }
+
+        .answer {
+            display: none;
+            color: #007B55;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .counter {
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            color: #6a1b1b;
+        }
+
+        .retry-button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #6a1b1b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .retry-button:hover {
+            background-color: #500f0f;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html">Tasting Room</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Wine Knowledge - Flashcards</h1>
+        <p>Upload an Excel file with wine-related flashcards.</p>
+        <input type="file" id="upload" accept=".xlsx, .xls" />
+        <div class="flashcards" id="flashcards"></div>
+        <div class="counter" id="counter">0/0</div>
+        <button id="retry" class="retry-button">Retry Incorrect Questions</button>
+    </div>
+
+    <script>
+        let allQuestions = [];
+        let revealedQuestions = 0;
+        let incorrectQuestions = [];
+
+        document.getElementById('upload').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const sheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[sheetName];
+                const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                allQuestions = json.slice(1).filter(row => row[1] && row[2]).map(row => ({
+                    question: row[1],
+                    answer: row[2]
+                }));
+
+                revealedQuestions = 0;
+                updateCounter();
+                displayQuestions(allQuestions);
+            };
+
+            reader.readAsArrayBuffer(file);
+        });
+
+        function displayQuestions(questions) {
+            const flashcardsDiv = document.getElementById('flashcards');
+            flashcardsDiv.innerHTML = '';
+
+            questions.forEach((q, index) => {
+                const cardDiv = document.createElement('div');
+                cardDiv.classList.add('card');
+                cardDiv.textContent = q.question;
+
+                const answerDiv = document.createElement('div');
+                answerDiv.classList.add('answer');
+                answerDiv.textContent = q.answer;
+
+                cardDiv.appendChild(answerDiv);
+                flashcardsDiv.appendChild(cardDiv);
+
+                cardDiv.addEventListener('click', () => {
+                    answerDiv.style.display = answerDiv.style.display === 'none' ? 'block' : 'none';
+                    revealedQuestions++;
+                    updateCounter();
+                });
+            });
+
+            updateCounter();
+        }
+
+        function updateCounter() {
+            document.getElementById('counter').textContent = `${revealedQuestions}/${allQuestions.length}`;
+        }
+    </script>
+
+</body>
+</html>
