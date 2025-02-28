@@ -1,4 +1,4 @@
-h<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@ h<!DOCTYPE html>
             line-height: 1.6;
         }
 
-        /* --- HEADER & NAVIGATION (angepasst an about.html) --- */
+        /* HEADER */
         header {
             background-color: #fff;
             padding: 20px 40px;
@@ -43,33 +43,33 @@ h<!DOCTYPE html>
             background-color: #6a1b1b;
         }
 
-        /* --- HEADER IMAGE MIT OVERLAY --- */
-        .blog-header {
+        /* HEADER IMAGE */
+        .home-header {
             text-align: center;
-            padding: 60px 20px;
-            background: url('italia.jpg') no-repeat center center/cover;
+            padding: 80px 20px;
+            background: url('hintergrundhell.jpg') no-repeat center center/cover;
             color: white;
             position: relative;
         }
 
-        .blog-header::after {
+        .home-header::after {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3); /* Milchiger Schatten */
         }
 
-        .blog-header h1 {
+        .home-header h1 {
             font-size: 1.5em;
             position: relative;
             z-index: 2;
             font-family: 'Inter', sans-serif;
         }
 
-        /* --- BLOG CONTENT --- */
+        /* BLOG CONTENT */
         .blog-section {
             max-width: 1000px;
             margin: 50px auto;
@@ -82,7 +82,7 @@ h<!DOCTYPE html>
             color: #444;
         }
 
-        /* --- GRID LAYOUT FÜR BLOG-EINTRÄGE --- */
+        /* GRID LAYOUT FÜR BLOG-EINTRÄGE */
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -129,7 +129,7 @@ h<!DOCTYPE html>
             grid-column: span 2;
         }
 
-        /* --- FOOTER --- */
+        /* FOOTER */
         footer {
             background-color: #fff;
             text-align: center;
@@ -150,7 +150,7 @@ h<!DOCTYPE html>
         </nav>
     </header>
 
-    <section class="blog-header">
+    <section class="home-header">
         <h1>Perfect Pairings</h1>
     </section>
 
@@ -159,14 +159,14 @@ h<!DOCTYPE html>
 
         <div class="blog-grid">
             <a href="Fresh.html" class="blog-item">
-                <img src="pairing.jpg" alt="Book your Tasting Session">
+                <img src="picnic.jpg" alt="Book your Tasting Session">
                 <div class="blog-title">Food & Wine Pairing</div>
             </a>
             <a href="winetravel.html" class="blog-item">
                 <img src="weinglaeser.jpg" alt="Food & Wine Pairing">
                 <div class="blog-title">Curated Wine Recommendations</div>
             </a>
-            <a href="winerecommendations.html" class="blog-item">
+            <a href="winerecommendations.html" class="blog-item large-item">
                 <img src="view.jpg" alt="Wine Recommendations">
                 <div class="blog-title">Book your Tasting Session</div>
             </a>
