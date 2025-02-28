@@ -51,14 +51,6 @@
             margin-bottom: 10px;
         }
 
-        input[type="file"] {
-            padding: 10px;
-            margin-top: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
         /* FLASHCARDS */
         .flashcards {
             margin-top: 20px;
@@ -124,8 +116,7 @@
 
     <div class="container">
         <h1>Wine Knowledge - Flashcards</h1>
-        <p>Upload an Excel file with wine-related flashcards.</p>
-        <input type="file" id="upload" accept=".xlsx, .xls" />
+        <p>Flashcards werden automatisch aus der Excel-Datei geladen.</p>
         <div class="flashcards" id="flashcards"></div>
         <div class="counter" id="counter">0/0</div>
         <button id="retry" class="retry-button">Retry Incorrect Questions</button>
@@ -134,31 +125,28 @@
     <script>
         let allQuestions = [];
         let revealedQuestions = 0;
-        let incorrectQuestions = [];
 
-        document.getElementById('upload').addEventListener('change', function (event) {
-            const file = event.target.files[0];
-            if (!file) return;
+        // Excel-Datei automatisch laden
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("D1_chapter1.xlsx") // Excel-Datei aus demselben Verzeichnis laden
+                .then(response => response.arrayBuffer())
+                .then(data => {
+                    const workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+                    const sheetName = workbook.SheetNames[0]; // Erstes Tabellenblatt
+                    const worksheet = workbook.Sheets[sheetName];
+                    const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: 'array' });
-                const sheetName = workbook.SheetNames[0];
-                const worksheet = workbook.Sheets[sheetName];
-                const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+                    // Fragen und Antworten extrahieren (Spalten A & B)
+                    allQuestions = json.slice(1).filter(row => row[0] && row[1]).map(row => ({
+                        question: row[0], 
+                        answer: row[1]
+                    }));
 
-                allQuestions = json.slice(1).filter(row => row[1] && row[2]).map(row => ({
-                    question: row[1],
-                    answer: row[2]
-                }));
-
-                revealedQuestions = 0;
-                updateCounter();
-                displayQuestions(allQuestions);
-            };
-
-            reader.readAsArrayBuffer(file);
+                    revealedQuestions = 0;
+                    updateCounter();
+                    displayQuestions(allQuestions);
+                })
+                .catch(error => console.error("Fehler beim Laden der Datei:", error));
         });
 
         function displayQuestions(questions) {
