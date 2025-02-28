@@ -99,18 +99,25 @@
         }
 
         .icon-box {
+            .icon-box {
             background-color: #fff;
             padding: 20px;
-            border-radius: 50%;  /* Runde Form */
+            border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             text-align: center;
+            width: 120px; /* Größe der Box */
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .icon-box img {
             width: 80px;  /* Größe der Icons anpassen */
             height: 80px;  /* Gleiche Höhe für runde Form */
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 50%;  /* Runde Icons */
         }
 
@@ -138,36 +145,33 @@
     </header>
     
     <section class="course-header">
-        <h1>WSET Level 4 - Diploma</h1>
+        <h1>Level 4 - Diploma</h1>
     </section>
 
     </div>
-
-
     
-    <div class="icons-container">
-        <a href="fragen1d.html" class="icon-box">
-            <img src="wineproduction.png" alt="Wine Production">
-            <h3>Wine Production</h3>
-        </a>
-        </div>
-        <div class="icon-box">
-            <img src="winebusiness.png" alt="Wine Business">
-            <h3>Wine Business</h3>
-        </div>
-        <div class="icon-box">
-            <img src="worldofwines.png" alt="Wines of the World">
-            <h3>Wines of the World</h3>
-        </div>
-        <div class="icon-box">
-            <img src="sparklingwines.png" alt="Sparkling Wines">
-            <h3>Sparkling Wines</h3>
-        </div>
-        <div class="icon-box">
-            <img src="fortifiedwines.png" alt="Fortified Wines">
-            <h3>Fortified Wines</h3>
-        </div>
-    </div>
+<div class="icons-container">
+    <a href="fragen1d.html" class="icon-box">
+        <img src="wineproduction.png" alt="Wine Production">
+        <h3>Wine Production</h3>
+    </a>
+    <a href="fragen2d.html" class="icon-box">
+        <img src="winebusiness.png" alt="Wine Business">
+        <h3>Wine Business</h3>
+    </a>
+    <a href="fragen3d.html" class="icon-box">
+        <img src="worldofwines.png" alt="Wines of the World">
+        <h3>Wines of the World</h3>
+    </a>
+    <a href="fragen4d.html" class="icon-box">
+        <img src="sparklingwines.png" alt="Sparkling Wines">
+        <h3>Sparkling Wines</h3>
+    </a>
+    <a href="fragen5d.html" class="icon-box">
+        <img src="fortifiedwines.png" alt="Fortified Wines">
+        <h3>Fortified Wines</h3>
+    </a>
+</div>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
