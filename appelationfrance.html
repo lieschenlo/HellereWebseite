@@ -112,15 +112,21 @@
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
 
+    <!-- Include H5P script and initialization -->
     <script src="H5P/h5p.js"></script>
     <script>
-        new H5PStandalone.H5P({
-            h5pJsonPath: 'H5P/appelation-frankreich.h5p',
-            frameJs: 'H5P/h5p.js',
-            frameCss: 'H5P/h5p.css',
-            id: 'h5p-container'
+        window.addEventListener('load', function() {
+            if (typeof H5P !== 'undefined') {
+                new H5PStandalone.H5P({
+                    h5pJsonPath: 'H5P/appelation-frankreich.h5p',  // Ensure the path is correct
+                    frameJs: 'H5P/h5p.js',
+                    frameCss: 'H5P/h5p.css',
+                    id: 'h5p-container'
+                });
+            } else {
+                console.error('H5P is not loaded correctly.');
+            }
         });
     </script>
 </body>
 </html>
-
