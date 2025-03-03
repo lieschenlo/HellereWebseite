@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WineLecture Level 4</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6a1b1b;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .course-header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            position: relative;
+        }
+
+        .course-header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2em;
+        }
+
+        /* ICON GRID */
+        .icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .icon-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 180px;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none; /* Removes underline */
+            color: inherit; /* Keeps the default text color */
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
+        }
+
+        .icon-box img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .icon-box h3 {
+            font-size: 1em;
+            color: #6a1b1b;
+            margin-bottom: 5px;
+        }
+
+        .icon-box p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="blog.html">Tasting Room</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="course-header">
+        <h1>Exercises</h1>
+    </section>
+
+    <div class="icons-container">
+        <a href="fragend1.html" class="icon-box">
+            <img src="view.jpg" alt="Flashcards">
+            <h3>Flashcards</h3>
+            <p>Interactive flashcards to test your knowledge.</p>
+        </a>
+        <a href="appellationfrance.html" class="icon-box">
+            <img src="toskana.jpg" alt="Maps">
+            <h3>Maps</h3>
+            <p>Explore wine regions and their appellations on the map.</p>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
