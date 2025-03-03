@@ -6,7 +6,7 @@
     <title>Wine Regions of France</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="H5P/h5p.css">
+    <link rel="stylesheet" href="h5p.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -113,15 +113,15 @@
     </footer>
 
     <!-- Include H5P script and initialization -->
-    <script src="H5P/h5p.js"></script>
+    <script src="h5p.js"></script>
     <script>
         window.addEventListener('load', function() {
             if (typeof H5P !== 'undefined') {
                 console.log('H5P loaded successfully');
                 new H5PStandalone.H5P({
-                    h5pJsonPath: 'H5P/appelation-frankreich.h5p',  // Ensure the path is correct
-                    frameJs: 'H5P/h5p.js',
-                    frameCss: 'H5P/h5p.css',
+                    h5pJsonPath: 'appelation-frankreich.h5p',
+                    frameJs: 'h5p.js',
+                    frameCss: 'h5p.css',
                     id: 'h5p-container'
                 });
             } else {
