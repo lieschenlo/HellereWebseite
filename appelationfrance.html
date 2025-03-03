@@ -117,6 +117,7 @@
     <script>
         window.addEventListener('load', function() {
             if (typeof H5P !== 'undefined') {
+                console.log('H5P loaded successfully');
                 new H5PStandalone.H5P({
                     h5pJsonPath: 'H5P/appelation-frankreich.h5p',  // Ensure the path is correct
                     frameJs: 'H5P/h5p.js',
