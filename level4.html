@@ -40,96 +40,67 @@
             position: relative;
         }
 
-        .levels-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        .level {
-            padding: 20px;
-            border-radius: 10px;
-            position: relative;
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: transform 0.3s ease, height 0.3s ease;
-            overflow: hidden;
-            height: 100px;
-        }
-
-        .level:hover {
-            transform: scale(1.05);
-            height: 200px;
-        }
-
-        .level span {
+        .course-header h1 {
             position: relative;
             z-index: 2;
-            display: block;
+            font-size: 2em;
         }
 
-        .level p {
-            position: relative;
-            z-index: 2;
-            margin-top: 10px;
-            background: white;
-            color: #333;
-            padding: 8px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            display: none;
-        }
-
-        .level:hover p {
-            display: block;
-        }
-
-        .level-4 { background-color: #982145; }
-
+        /* ICON GRID */
         .icons-container {
-            display: flex;  /* Flexbox für horizontale Anordnung */
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             max-width: 1000px;
             margin: 40px auto;
+            padding: 20px;
         }
 
         .icon-box {
-            .icon-box {
             background-color: #fff;
             padding: 20px;
-            border-radius: 50%;
+            border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             text-align: center;
-            width: 120px; /* Größe der Box */
-            height: 120px;
+            width: 180px;
+            height: 220px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+        }
+
+        .icon-box:hover {
+            transform: scale(1.05);
         }
 
         .icon-box img {
-            width: 80px;  /* Größe der Icons anpassen */
-            height: 80px;  /* Gleiche Höhe für runde Form */
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            border-radius: 50%;  /* Runde Icons */
+            margin-bottom: 10px;
         }
 
+        .icon-box h3 {
+            font-size: 1em;
+            color: #6a1b1b;
+            margin-bottom: 5px;
+        }
+
+        .icon-box p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* FOOTER */
         footer {
             background-color: #fff;
             padding: 20px;
             text-align: center;
             border-top: 1px solid #e0e0e0;
-        }
-
-        .icon-box:hover {
-        transform: scale(1.05);
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -148,30 +119,33 @@
         <h1>Level 4 - Diploma</h1>
     </section>
 
+    <div class="icons-container">
+        <a href="fragen1d.html" class="icon-box">
+            <img src="wineproduction.png" alt="Wine Production">
+            <h3>Wine Production</h3>
+            <p>Von Rebsorten bis zur Vinifikation: Alles über die Herstellung.</p>
+        </a>
+        <a href="fragen2d.html" class="icon-box">
+            <img src="winebusiness.png" alt="Wine Business">
+            <h3>Wine Business</h3>
+            <p>Markt, Trends und wirtschaftliche Aspekte der Weinwelt.</p>
+        </a>
+        <a href="fragen3d.html" class="icon-box">
+            <img src="worldofwines.png" alt="Wines of the World">
+            <h3>Wines of the World</h3>
+            <p>Entdecke Weine und Terroirs aus den besten Anbaugebieten.</p>
+        </a>
+        <a href="fragen4d.html" class="icon-box">
+            <img src="sparklingwines.png" alt="Sparkling Wines">
+            <h3>Sparkling Wines</h3>
+            <p>Von Champagner bis Prosecco – die Welt der Schaumweine.</p>
+        </a>
+        <a href="fragen5d.html" class="icon-box">
+            <img src="fortifiedwines.png" alt="Fortified Wines">
+            <h3>Fortified Wines</h3>
+            <p>Port, Sherry & Co.: Die Geheimnisse der verstärkten Weine.</p>
+        </a>
     </div>
-    
-<div class="icons-container">
-    <a href="fragen1d.html" class="icon-box">
-        <img src="wineproduction.png" alt="Wine Production">
-        <h3>Wine Production</h3>
-    </a>
-    <a href="fragen2d.html" class="icon-box">
-        <img src="winebusiness.png" alt="Wine Business">
-        <h3>Wine Business</h3>
-    </a>
-    <a href="fragen3d.html" class="icon-box">
-        <img src="worldofwines.png" alt="Wines of the World">
-        <h3>Wines of the World</h3>
-    </a>
-    <a href="fragen4d.html" class="icon-box">
-        <img src="sparklingwines.png" alt="Sparkling Wines">
-        <h3>Sparkling Wines</h3>
-    </a>
-    <a href="fragen5d.html" class="icon-box">
-        <img src="fortifiedwines.png" alt="Fortified Wines">
-        <h3>Fortified Wines</h3>
-    </a>
-</div>
 
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
