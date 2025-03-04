@@ -112,13 +112,14 @@
     </footer>
 
     <!-- Include H5P script and initialization -->
+    <script type="text/javascript" src="dist/frame.bundle.js"></script>
     <script type="text/javascript" src="dist/main.bundle.js"></script>
     <script type="text/javascript">
         window.addEventListener('load', function() {
             if (typeof H5P !== 'undefined') {
                 console.log('H5P loaded successfully');
                 new H5PStandalone.H5P({
-                    h5pJsonPath: 'h5p-content/h5p.json',
+                    h5pJsonPath: 'h5p-content',
                     frameJs: 'dist/frame.bundle.js',
                     frameCss: 'dist/styles/h5p.css',
                     id: 'h5p-container'
