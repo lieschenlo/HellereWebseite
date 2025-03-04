@@ -114,9 +114,13 @@
     <!-- Include H5P script and initialization -->
     <script type="text/javascript" src="dist/frame.bundle.js"></script>
     <script type="text/javascript" src="dist/main.bundle.js"></script>
-    <script type="text/javascript">
+    <script>
         window.addEventListener('load', function() {
-            if (typeof H5P !== 'undefined') {
+            if (typeof H5PIntegration === 'undefined') {
+                console.error('H5PIntegration is missing!');
+            } else if (typeof H5P === 'undefined') {
+                console.error('H5P is not loaded correctly.');
+            } else {
                 console.log('H5P loaded successfully');
                 new H5PStandalone.H5P({
                     h5pJsonPath: 'h5p-content',
@@ -124,8 +128,6 @@
                     frameCss: 'dist/styles/h5p.css',
                     id: 'h5p-container'
                 });
-            } else {
-                console.error('H5P is not loaded correctly.');
             }
         });
     </script>
