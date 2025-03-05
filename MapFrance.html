@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine Regions of France</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>WineLecture Level 4</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -14,7 +14,7 @@
             padding: 0;
             line-height: 1.6;
         }
-        /* HEADER */
+
         header {
             background-color: #fff;
             padding: 20px 40px;
@@ -23,6 +23,7 @@
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
         }
+
         nav a {
             text-decoration: none;
             color: #6a1b1b;
@@ -30,61 +31,75 @@
             font-weight: bold;
             position: relative;
         }
-        nav a:hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 2px;
-            background-color: #6a1b1b;
-        }
-        /* HEADER IMAGE */
-        .home-header {
+
+        .course-header {
             text-align: center;
-            padding: 80px 20px;
-            background: url('hintergrundhell.jpg') no-repeat center center/cover;
-            color: white;
+            padding: 60px 20px;
+            color: #6a1b1b;
             position: relative;
         }
-        .home-header::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-        }
-        .home-header h1 {
-            font-size: 1.5em;
+
+        .course-header h1 {
             position: relative;
             z-index: 2;
+            font-size: 2em;
         }
-        .container {
-            max-width: 1500px;
+
+        /* ICON GRID */
+        .icons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
             margin: 40px auto;
+            padding: 20px;
+        }
+
+        .icon-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
             text-align: center;
-        }
-        .container iframe {
-            margin-bottom: 40px;
-        }
-        .back-button {
-            display: inline-block;
-            margin: 40px;
-            padding: 10px 20px;
-            background-color: #6a1b1b;
-            color: white;
+            width: 180px;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             text-decoration: none;
-            border-radius: 5px;
+            color: inherit;
         }
-        .back-button:hover {
-            background-color: #8c2f2f;
+
+        .icon-box:hover {
+            transform: scale(1.05);
         }
+
+        .icon-box img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .icon-box h3 {
+            font-size: 1em;
+            color: #6a1b1b;
+            margin-bottom: 5px;
+        }
+
+        .icon-box p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* FOOTER */
         footer {
             background-color: #fff;
-            text-align: center;
             padding: 20px;
+            text-align: center;
             border-top: 1px solid #e0e0e0;
             margin-top: 40px;
         }
@@ -95,19 +110,34 @@
         <h1>WineLecture</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
+            <a href="courses.html" class="active">Courses</a>
             <a href="blog.html">Tasting Room</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    
-    <div class="container">
-        <h2>Interactive Wine Regions Map</h2>
-        <p>Match the appellations using Drag & Drop.</p>
-        <iframe src="AppellationFrankreich.html" width="100%" height="600px" style="border:none;"></iframe>
-        <a href="übungen4.html" class="back-button">Back</a>
+
+    <section class="course-header">
+        <h1>Explore Wine Regions</h1>
+    </section>
+
+    <div class="icons-container">
+        <a href="Italy.html" class="icon-box">
+            <h3>Italy</h3>
+        </a>
+        <a href="France.html" class="icon-box">
+            <h3>France</h3>
+        </a>
+        <a href="Germany.html" class="icon-box">
+            <h3>Germany</h3>
+        </a>
+        <a href="California.html" class="icon-box">
+            <h3>California</h3>
+        </a>
+        <a href="Spain.html" class="icon-box">
+            <h3>Spain</h3>
+        </a>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 WineLecture. All rights reserved.</p>
     </footer>
