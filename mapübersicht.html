@@ -45,15 +45,36 @@
             font-size: 2em;
         }
 
+        /* WRAPPER FÜR SCROLLBAR */
+        .icons-wrapper {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
         /* ICON GRID */
         .icons-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 40px auto;
+            flex-wrap: nowrap; /* Verhindert Umbruch */
+            gap: 20px;
             padding: 20px;
+            overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+            white-space: nowrap;
+            scrollbar-width: thin; /* Für Firefox */
+            scrollbar-color: #6a1b1b #f9f7f4; /* Farbe für Scrollbar */
+        }
+
+        .icons-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .icons-container::-webkit-scrollbar-track {
+            background: #f9f7f4;
+        }
+
+        .icons-container::-webkit-scrollbar-thumb {
+            background: #6a1b1b;
+            border-radius: 10px;
         }
 
         .icon-box {
@@ -68,31 +89,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             text-decoration: none;
             color: inherit;
+            flex-shrink: 0; /* Verhindert Größenänderung */
         }
 
         .icon-box:hover {
             transform: scale(1.05);
         }
 
-        .icon-box img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-
         .icon-box h3 {
             font-size: 1em;
             color: #6a1b1b;
             margin-bottom: 5px;
-        }
-
-        .icon-box p {
-            font-size: 0.9em;
-            color: #666;
         }
 
         /* FOOTER */
@@ -120,22 +130,24 @@
         <h1>Explore Wine Regions</h1>
     </section>
 
-    <div class="icons-container">
-        <a href="Italy.html" class="icon-box">
-            <h3>Italy</h3>
-        </a>
-        <a href="mapfrance.html" class="icon-box">
-            <h3>France</h3>
-        </a>
-        <a href="Germany.html" class="icon-box">
-            <h3>Germany</h3>
-        </a>
-        <a href="California.html" class="icon-box">
-            <h3>California</h3>
-        </a>
-        <a href="Spain.html" class="icon-box">
-            <h3>Spain</h3>
-        </a>
+    <div class="icons-wrapper">
+        <div class="icons-container">
+            <a href="Italy.html" class="icon-box">
+                <h3>Italy</h3>
+            </a>
+            <a href="mapfrance.html" class="icon-box">
+                <h3>France</h3>
+            </a>
+            <a href="Germany.html" class="icon-box">
+                <h3>Germany</h3>
+            </a>
+            <a href="California.html" class="icon-box">
+                <h3>California</h3>
+            </a>
+            <a href="Spain.html" class="icon-box">
+                <h3>Spain</h3>
+            </a>
+        </div>
     </div>
 
     <footer>
