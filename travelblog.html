@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Recommendations Around the World</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f7f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6a1b1b;
+            margin: 0 15px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #6a1b1b;
+        }
+
+        /* HEADER IMAGE */
+        .home-header {
+            text-align: center;
+            padding: 80px 20px;
+            background: url('travel-world.jpg') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+
+        .home-header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Milchiger Schatten */
+        }
+
+        .home-header h1 {
+            font-size: 2em;
+            position: relative;
+            z-index: 2;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* BLOG CONTENT */
+        .blog-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .blog-section p {
+            font-size: 1.0em;
+            color: #444;
+        }
+
+        /* GRID LAYOUT FÜR BLOG-EINTRÄGE */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .blog-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: brightness(70%);
+            transition: 0.3s ease;
+        }
+
+        .blog-item:hover img {
+            filter: brightness(50%);
+        }
+
+        .blog-title {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            color: #6a1b1b;
+            font-size: 1.0em;
+            font-weight: bold;
+            padding: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Das letzte Element soll sich über zwei Spalten erstrecken */
+        .large-item {
+            grid-column: span 2;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WineLecture</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home-header">
+        <h1>Curated Recommendations Around the World</h1>
+    </section>
+
+    <main class="blog-section">
+        <p>Explore curated travel destinations with the best food and wine experiences from across the globe. Discover hidden gems, tastful spots, and more!</p>
+
+        <div class="blog-grid">
+            <a href="ItalyTravel.html" class="blog-item">
+                <img src="italy.jpg" alt="Explore Italy">
+                <div class="blog-title">Explore Italy</div>
+            </a>
+            <a href="FranceTravel.html" class="blog-item">
+                <img src="france.jpg" alt="Explore France">
+                <div class="blog-title">Explore France</div>
+            </a>
+            <a href="SpainTravel.html" class="blog-item">
+                <img src="spain.jpg" alt="Explore Spain">
+                <div class="blog-title">Explore Spain</div>
+            </a>
+            <a href="CaliforniaTravel.html" class="blog-item large-item">
+                <img src="california.jpg" alt="Explore California">
+                <div class="blog-title">Explore California</div>
+            </a>
+            <a href="GermanyTravel.html" class="blog-item">
+                <img src="germany.jpg" alt="Explore Germany">
+                <div class="blog-title">Explore Germany</div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WineLecture. All rights reserved.</p>
+    </footer>
+</body>
+</html>
