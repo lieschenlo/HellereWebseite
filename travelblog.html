@@ -69,6 +69,48 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* BACK BUTTON */
+        .back-button {
+            display: inline-block;
+            background-color: #6a1b1b;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #9b2c2c;
+        }
+
+        /* Fenstergestaltung */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .window {
+            width: 150px; /* Größe des Fensters */
+            height: 150px; /* Höhe des Fensters */
+            background-color: #fff;
+            border: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .window img {
+            width: 50px; /* Größe des Bildes als Icon */
+            height: 50px;
+        }
+
         /* BLOG CONTENT */
         .blog-section {
             max-width: 1000px;
@@ -124,11 +166,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Das letzte Element soll sich über zwei Spalten erstrecken */
-        .large-item {
-            grid-column: span 2;
-        }
-
         /* FOOTER */
         footer {
             background-color: #fff;
@@ -152,10 +189,23 @@
 
     <section class="home-header">
         <h1>Curated Recommendations Around the World</h1>
+        <a href="javascript:history.back()" class="back-button">Back</a>
     </section>
 
     <main class="blog-section">
         <p>Explore curated travel destinations with the best food and wine experiences from across the globe. Discover hidden gems, tastful spots, and more!</p>
+
+        <div class="container">
+            <div class="window">
+                <img src="italy.png" alt="Icon for Italy">
+            </div>
+            <div class="window">
+                <img src="france.jpg" alt="Icon for France">
+            </div>
+            <div class="window">
+                <img src="spain.jpg" alt="Icon for Spain">
+            </div>
+        </div>
 
         <div class="blog-grid">
             <a href="ItalyTravel.html" class="blog-item">
