@@ -81,8 +81,18 @@
             padding: 20px;
         }
 
+        * Standard: Text links, Bild rechts */
+        .level-container:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        /* Jeder zweite Container: Bild links, Text rechts */
+        .level-container:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
         .level-container img {
-            width: 40%;
+            width: 30%;
             border-radius: 12px;
         }
 
