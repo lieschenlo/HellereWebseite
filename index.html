@@ -83,17 +83,19 @@
 
         * Standard: Text links, Bild rechts */
         .level-container:nth-child(odd) {
-            flex-direction: row;
+            flex-direction: row; !important;
         }
 
         /* Jeder zweite Container: Bild links, Text rechts */
         .level-container:nth-child(even) {
-            flex-direction: row-reverse;
+            flex-direction: row-reverse; !important;
         }
         
         .level-container img {
-            width: 30%;
-            border-radius: 12px;
+            width: 60%;      /* Breiteres Bild */
+            height: 40px;   /* Festgelegte Höhe */
+            object-fit: cover; /* Bild skaliert und behält sein Seitenverhältnis */
+            border-radius: 12px
         }
 
         .level-text {
