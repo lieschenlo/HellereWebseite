@@ -15,14 +15,22 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
+        /* FIXED HEADER */
         header {
             background-color: #fff;
-            padding: 20px 40px;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e0e0e0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        body {
+            padding-top: 80px;
         }
 
         nav a {
@@ -46,19 +54,12 @@
         /* HEADER IMAGE */
         .home-header {
             text-align: left;
-            padding: 80px 20px;
+            padding: 60px 20px; /* Verkleinerter Abstand */
             background: url('hintergrundhell.jpg') no-repeat center center/cover;
             position: relative;
-        }
-
-        .home-header::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Milchiger Schatten */
+            display: flex;
+            align-items: center;
+            height: 300px;
         }
 
         .home-header h1 {
@@ -71,42 +72,54 @@
             margin-left: 40px;
         }
 
-        /* LEVEL SYSTEM */
+        /* LEVEL SYSTEM - Boschendal-Style */
+        .levels {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
         .level-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
+            width: 100%;
+            gap: 30px;
         }
 
-        * Standard: Text links, Bild rechts */
         .level-container:nth-child(odd) {
-            flex-direction: row; !important;
+            flex-direction: row;
         }
-
-        /* Jeder zweite Container: Bild links, Text rechts */
+        
         .level-container:nth-child(even) {
-            flex-direction: row-reverse; !important;
+            flex-direction: row-reverse;
         }
         
         .level-container img {
-            width: 80px;      /* Breiteres Bild */
-            height: 80px;   /* Festgelegte Höhe */
-            object-fit: cover; /* Bild skaliert und behält sein Seitenverhältnis */
-            border-radius: 12px
+            width: 50%; 
+            height: auto;
+            object-fit: cover;
+            border-radius: 0px; /* Ecken entfernt */
         }
 
         .level-text {
             width: 50%;
-            font-size: 1.1em;
+            font-size: 1.3em;
         }
 
         .level-text a {
             text-decoration: none;
             color: #292E39;
             font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        /* Mittleres Bild linksbündig */
+        .level-container:nth-child(2) img {
+            align-self: flex-start;
         }
 
         /* FOOTER */
@@ -134,25 +147,27 @@
         <h1>Discover, Taste & Learn<br>Your Wine Journey Starts Here</h1>
     </section>
 
-    <div class="level-container">
-        <div class="level-text">
-            <a href="courses.html">Explore Level 1 - Fundamentals of Wine</a>
+    <div class="levels">
+        <div class="level-container">
+            <div class="level-text">
+                <a href="courses.html">Explore Level 1 - Fundamentals of Wine</a>
+            </div>
+            <img src="weinkeller.jpg" alt="Level 1">
         </div>
-        <img src="weinkeller.jpg" alt="Level 1">
-    </div>
 
-    <div class="level-container">
-        <img src="italia.jpg" alt="Level 2">
-        <div class="level-text">
-            <a href="level2.html">Food & Wine Pairing - Master your next party</a>
+        <div class="level-container">
+            <img src="italia.jpg" alt="Level 2">
+            <div class="level-text">
+                <a href="level2.html">Food & Wine Pairing - Master your next party</a>
+            </div>
         </div>
-    </div>
 
-    <div class="level-container">
-        <div class="level-text">
-            <a href="level3.html">Curated Wine Recommendations</a>
+        <div class="level-container">
+            <div class="level-text">
+                <a href="level3.html">Curated Wine Recommendations</a>
+            </div>
+            <img src="weinglaeser.jpg" alt="Level 3">
         </div>
-        <img src="weinglaeser.jpg" alt="Level 3">
     </div>
 
     <footer>
