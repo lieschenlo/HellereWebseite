@@ -86,7 +86,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 50%;
+            width: 100%;
             margin-left: 0; /* Container berührt den linken Bildschirmrand */
             margin-right: 0; /* Entfernt alle Ränder auf der rechten Seite */
             padding: 0;gap: 0;
@@ -94,14 +94,16 @@
         }
 
         .level-container img {
-            width: 70%;
+            width: 50%;
             object-fit: cover;
-            height: auto;
+            height: auto; /* Automatische Höhenanpassung */
+            margin-left: 0; /* Bild berührt den linken Rand */
+            padding: 0; /* Keine zusätzlichen Abstände */
         }
 
         .level-text {
             width: 50%;
-            padding: 20px;
+            padding: 0px;
             font-size: 1.2em;
         }
 
