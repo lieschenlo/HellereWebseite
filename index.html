@@ -54,7 +54,7 @@
         /* HEADER IMAGE */
         .home-header {
             text-align: left;
-            padding: 60px 20px; /* Verkleinerter Abstand */
+            padding: 60px 20px; 
             background: url('hintergrundhell.jpg') no-repeat center center/cover;
             position: relative;
             display: flex;
@@ -72,7 +72,7 @@
             margin-left: 40px;
         }
 
-        /* LEVEL SYSTEM - Boschendal-Style */
+        /* LEVEL SYSTEM */
         .levels {
             display: flex;
             flex-direction: column;
@@ -84,25 +84,17 @@
 
         .level-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
-            gap: 30px;
+            gap: 0;
+            margin-bottom: 40px;
         }
 
-        .level-container:nth-child(odd) {
-            flex-direction: row;
-        }
-        
-        .level-container:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
         .level-container img {
-            width: 55%; 
-            height: 300px;
+            width: 50%;
             object-fit: cover;
-            border-radius: 0px; /* Ecken entfernt */
+            height: 100%;
         }
 
         .level-text {
@@ -117,7 +109,6 @@
             font-weight: bold;
             font-size: 1.3em;
         }
-
 
         /* FOOTER */
         footer {
