@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WineLecture Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -25,18 +26,20 @@
             border-bottom: 1px solid #e0e0e0;
             position: fixed;
             top: 0;
-          
+            width: 100%;
         }
 
         body {
             padding-top: 80px;
         }
+
         nav {
             display: flex;
             gap: 15px;
-            flex-wrap: wrap;  /* Damit es nicht überläuft */
+            flex-wrap: wrap;
             justify-content: flex-start;
         }
+
         nav a {
             text-decoration: none;
             color: #6a1b1b;
@@ -58,7 +61,7 @@
         /* HEADER IMAGE */
         .home-header {
             text-align: left;
-            padding: 60px 20px; 
+            padding: 60px 20px;
             background: url('hintergrundhell.jpg') no-repeat center center/cover;
             position: relative;
             display: flex;
@@ -67,6 +70,7 @@
         }
 
         .home-header h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.6em;
             text-transform: uppercase;
             position: relative;
@@ -81,7 +85,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0px;
+            gap: 40px;
             max-width: 100%;
             margin: 60px 0;
         }
@@ -91,31 +95,54 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            margin-left: 0; /* Container berührt den linken Bildschirmrand */
-            margin-right: 0; /* Entfernt alle Ränder auf der rechten Seite */
-            padding: 0;
-            gap: 0;
+            padding: 40px;
         }
 
         .level-container img {
-            width: 60%;
+            width: 50%;
             object-fit: cover;
-            height: 300px; /* Automatische Höhenanpassung */
-            margin-left: 0; /* Bild berührt den linken Rand */
-            padding: 0; /* Keine zusätzlichen Abstände */
+            height: 300px;
         }
 
         .level-text {
             width: 50%;
-            padding: 40px;
-            font-size: 1.2em;
+            padding: 20px;
         }
 
-        .level-text a {
+        .level-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .level-text h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4em;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #6a1b1b;
+        }
+
+        .level-text p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #6a1b1b;
+            border: 2px solid #6a1b1b;
             text-decoration: none;
-            color: #292E39;
-            font-weight: 
-            font-size: 1.3em;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #6a1b1b;
+            color: white;
         }
 
         /* FOOTER */
@@ -146,7 +173,10 @@
     <div class="levels">
         <div class="level-container">
             <div class="level-text">
-                <a href="courses.html">Explore Level 1 - Fundamentals of Wine</a>
+                <h2>Fundamentals of Wine</h2>
+                <h3>Explore the rich history and key principles</h3>
+                <p>Learn about different wine varieties, production techniques, and tasting methods that will elevate your wine experience.</p>
+                <a href="courses.html" class="button">Start Learning</a>
             </div>
             <img src="weinkeller.jpg" alt="Level 1">
         </div>
@@ -154,13 +184,19 @@
         <div class="level-container">
             <img src="italia.jpg" alt="Level 2">
             <div class="level-text">
-                <a href="level2.html">Food & Wine Pairing - Master your next party</a>
+                <h2>Food & Wine Pairing</h2>
+                <h3>Master your next party with the perfect match</h3>
+                <p>Understand how to pair wines with different dishes to bring out the best flavors for any occasion.</p>
+                <a href="level2.html" class="button">Discover More</a>
             </div>
         </div>
 
         <div class="level-container">
             <div class="level-text">
-                <a href="level3.html">Curated Wine Recommendations</a>
+                <h2>Curated Wine Recommendations</h2>
+                <h3>Find the best wines for every taste</h3>
+                <p>Receive expert recommendations based on regions, grape varieties, and personal preferences.</p>
+                <a href="level3.html" class="button">Explore Now</a>
             </div>
             <img src="weinglaeser.jpg" alt="Level 3">
         </div>
