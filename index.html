@@ -23,14 +23,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e0e0e0;
-            position: fixed;
+            border-bottom: none;
+            position: absolute;
             top: 0;
             width: 100%;
         }
 
         body {
-            padding-top: 50px;
+            padding-top: 80px;
         }
 
         nav {
@@ -86,35 +86,38 @@
             flex-direction: column;
             align-items: center;
             max-width: 100%;
-            margin: 0px; 
+            margin: 0; 
             padding: 0;
         }
 
         .level-container {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: stretch;
             width: 100%;
             padding: 0;
             margin: 0;
+            gap: 0;
         }
 
         .level-container img {
             width: 50%;
             object-fit: cover;
-            height: 400px;
+            height: 100%;
             display: block;
         }
 
         .level-text {
-            width: 30%;
-            padding: 150px;
-            margin: 0;
+            width: 50%;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .level-text h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 10px;
         }
 
@@ -201,7 +204,7 @@
                 <p>Receive expert recommendations based on regions, grape varieties, and personal preferences.</p>
                 <a href="level3.html" class="button">Explore Now</a>
             </div>
-            <img src="pictiures/weinglaeser.jpg" alt="Level 3">
+            <img src="pictures/weinglaeser.jpg" alt="Level 3">
         </div>
     </div>
 
